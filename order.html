@@ -1,0 +1,120 @@
+﻿<html>
+      <head>
+		<title>Order</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css"></link>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../css/stylem.css"></link>
+
+		<script>
+			function order()
+			{
+				var item = document.getElementById("item").value;
+				var qty = document.getElementById("qty").value;
+				var addr = document.getElementById("address").value;
+				var total=item*qty;					
+				document.getElementById("bill").innerHTML="<hr>"+"Your Total bill is: "+total+" <br></br>"+" Your Order is delivered in this address: "+addr+"<br></br>"+"Payment Delivery";
+				document.getElementById("f1").style.display="none";
+			}
+			
+			
+		</script>
+
+		</head>
+	
+	<body>
+	     		<div id="bg-overlay"></div>
+			<!-- img overlay is end -->
+			
+			
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+					<a href="#" class="navbar-brand" id="logo"><h2>F<span style="color:white; font-size:20px">ast Food Restaurant</span></h2>
+					
+					<p id="textlogo">THE REAL TASTE</p></a>
+					</div>
+										
+					<div class="collapse navbar-collapse" id="mynavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="home.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="menu.html">Menu & Nutrition</a></li>
+						<li><a href="reservation.html">Reservation</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right" id="signup">
+					<li><a href="loginform.html"><span class="glyphicon glyphicon-log-in"></span>                      
+					                     login</a></li>
+					
+					</div>
+					
+				</div><!-- container-fluid closes -->
+			</nav><!-- nav closes -->
+		<!----    navigation bar is end    ---->
+		
+		<div class="container" id="order">
+			<div class="row" id="form1">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6" >
+				<form method="POST" action="#" name="form1" id="f1">
+					<div class="row form-group">
+						<div class="col-sm-4"><label>Select Menu Items:</label></div>
+						<div class="col-sm-8">
+							<select id="item" class="form-control">
+								<option value="0">Choose item</option>
+								<option value="30">Simple Noodles</option>
+								<option value="170">Veg Pizza</option>
+								<option value="40">Salad</option>
+								<option value="200">Burger</option>
+								<option value="50">Hotdog</option>
+								<option value="60">Veg Noodles</option>
+								 <option value="40">Oreo Pastry</option>
+								 <option value="220">Cheese Pizza</option>
+								 <option value="60">Sandwich</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="row form-group">
+						<div class="col-sm-4"><label>Quantity:</label></div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="qty"></input>
+						</div>
+					</div>
+					
+					<div class="row form-group">
+						<div class="col-sm-4"><label>Address:</label></div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="address"></input>
+						</div>
+					</div>
+					<br>
+					<div class="col-sm-12 text-center">
+						<button type="button" class="btn btn-default" onclick="order()">Order</button>
+					</div>
+					
+					</form>
+					<div class="row" id="billpage">
+						<div class="col-sm-12">
+						<p id="bill" align="center"></p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-3">
+				</div>
+					
+						
+			</div>
+		</div>
+		
+	</body>
+</html>
